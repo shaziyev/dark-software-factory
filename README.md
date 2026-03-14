@@ -101,7 +101,7 @@ Our evaluation criteria are purely objective.
 ### The build must:
 
 - ✅ Pass all test cases  
-- ✅ Pass the **Ruff** static code checker  
+- ✅ Pass the Ruff static code checker  
 - ✅ Follow technical constraints  
 - ✅ Avoid shortcuts (like hardcoding answers)
 
@@ -157,3 +157,8 @@ The comparison focuses on:
 > **Claude Code 4.6 Opus — Efficient Minimalist**  
 > The laid-back senior engineer who finishes the task quickly and clearly has hobbies outside of programming.
 
+## 🧠 The New Bottleneck: Human Thinking
+
+When implementation becomes trivial and the **cost of change approaches zero**  
+(as discussed in [Kim Adams — *Outliving Boehm's Curve*](https://www.linkedin.com/pulse/outliving-boehms-curve-kim-adams-2iilc/)),  
+the real challenge in engineering shifts toward **defining the right problem to solve**.
