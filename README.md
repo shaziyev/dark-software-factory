@@ -70,4 +70,38 @@ A true Level 5 Dark Software Factory would go one step further and generate the 
 
 And honestly… I agree.
 
-But for the sake of this experiment - and to keep the agents from fully taking over just yet we’ll treat this as Level 4-ish.
+But for the sake of this experiment - and to keep the agents from fully taking over just yet we’ll treat this as Level 4-ish :)
+
+## The Key Mechanism — Build → Test → Fix Loop
+
+The system is designed for asynchronous autonomous execution.
+The agent runs the following loop:
+
+1. Build the application
+2. Run automated tests
+3. Fix failures
+4. Repeat
+
+This loop continues until **all acceptance tests pass**.
+
+No human supervision required.
+
+If you'd like to repeat the experiment, enable **automatic approval of agent actions**.
+
+*(Naturally, this is at your own risk - agents are surprisingly enthusiastic once they realize nobody is watching)*
+
+## Evaluation (The Most Important Part)
+
+Following Andrew Ng's advice:
+
+> **Eval is king.**
+
+Our evaluation criteria are purely objective.
+
+### The build must:
+
+- ✅ Pass all test cases  
+- ✅ Pass the **Ruff** static code checker  
+- ✅ Follow technical constraints  
+- ✅ Avoid shortcuts (like hardcoding answers)
+
