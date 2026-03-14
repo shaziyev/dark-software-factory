@@ -48,6 +48,8 @@ Python runs locally on the dataframe
 Results returned to user
 ```
 
+![App Screenshot](images/screenshot.png)
+
 ## Inspiration
 
 The idea for this app was inspired by Andrew Ng’s course: https://learn.deeplearning.ai/courses/agentic-ai/
