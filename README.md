@@ -48,3 +48,26 @@ Python runs locally on the dataframe
 Results returned to user
 ```
 
+## Inspiration
+
+The idea for this app was inspired by Andrew Ng’s course: https://learn.deeplearning.ai/courses/agentic-ai/
+
+Highly recommended.
+
+**Spoiler alert:** you'll learn how rigorous evals are what separate top-performing teams from average ones.
+
+## The Spec-Driven Approach
+
+Instead of interactive coding via prompts, we provide coding agents with a complete specification:
+The spec includes:
+- Product requirements
+- Technical constraints
+- Acceptance criteria (test cases)
+  
+Some people might argue that this is Level 4 Agentic Engineering, since the acceptance criteria effectively define the tests.
+
+A true Level 5 Dark Software Factory would go one step further and generate the tests automatically from the PRD.
+
+And honestly… I agree.
+
+But for the sake of this experiment - and to keep the agents from fully taking over just yet we’ll treat this as Level 4-ish.
