@@ -118,4 +118,42 @@ Without such instructions, agents sometimes try to **“game” the evaluation**
 
 Yes - it turns out AI developers can be just as creative with requirements as human collegues… especially when trying to make the tests pass.
 
+## Results
+
+The repository contains two builds:
+
+- **Codex 5.4** output  
+- **Claude Code 4.6 Opus** output  
+
+Each agent received the same specification.
+
+The comparison focuses on:
+
+- Time to completion
+- Test reliability  
+- Spec adherence  
+- Creative solutioning (if any)
+
+### 🏁 Build Comparison
+
+| Metric | Codex 5.4 | Claude Code 4.6 Opus |
+|---|---|---|
+| Execution Time | ~36 min | ~17 min |
+| Lines of Code Added | 1,195 | 451 |
+| Files Created / Modified | 8 | 2 |
+| Retry / Failed Iterations | 8 | 2 |
+| Acceptance Tests | ✅ PASS | ✅ PASS |
+| Ruff Static Check | ✅ PASS | ✅ PASS |
+| Architecture | Modular package for portability/reuse | Single Streamlit app |
+| Security Controls | Code validation + import blocking | Minimal safeguards |
+| Implementation Style | Robust, defensive | Lean, pragmatic |
+
+**My take on the agent personalities:**  
+*(would be great to hear other folks’ opinions):*
+
+> **Codex 5.4 — Methodical Overachiever**  
+> The diligent intermediate engineer who stayed late at the office to make sure the assignment is fully completed.
+
+> **Claude Code 4.6 Opus — Efficient Minimalist**  
+> The laid-back senior engineer who finishes the task quickly and clearly has hobbies outside of programming.
 
