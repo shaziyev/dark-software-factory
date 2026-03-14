@@ -157,6 +157,16 @@ The comparison focuses on:
 > **Claude Code 4.6 Opus — Efficient Minimalist**  
 > The laid-back senior engineer who finishes the task quickly and clearly has hobbies outside of programming.
 
+## Takeaways
+
+Both agents successfully completed the test. Interestingly, it took **longer to write the specification than for the agents to produce the code**, which leads to a provocative conclusion: we may already be much closer to the Dark Software Factory than we think.
+
+Of course, real-world projects with large codebases and complex dependencies are significantly harder to delegate to agents without close supervision.
+
+However, the capability frontier is moving quickly. The effective intelligence of LLM systems appears to be **roughly doubling every ~7 months** (see [METR Time Horizons](https://metr.org/time-horizons/)).
+
+In this small experiment, the agents autonomously implemented a **complete user story from specification to tested code**, without human supervision - a task that would likely take a human developer at least a day or a few, even in full vibe-coding mode.
+
 ## 🧠 The New Bottleneck: Human Thinking
 
 When implementation becomes trivial and the **cost of change approaches zero**  
