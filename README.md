@@ -170,3 +170,9 @@ In this small experiment, the agents autonomously implemented a **complete user 
 ## 🧠 The New Bottleneck: Human Thinking
 
 When implementation becomes trivial and the **cost of change approaches zero**  (as discussed in [Kim Adams — *Outliving Boehm's Curve*](https://www.linkedin.com/pulse/outliving-boehms-curve-kim-adams-2iilc/)), the real challenge in engineering shifts toward **defining the right problem to solve**.
+
+<p align="center">
+  <img src="images/einstein.png" width="500">
+</p>
+
+And at least for now, humans still decide what is worth building in the first place ;)
