@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk2Excel - Build Report</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
+        h1 { font-size: 2rem; margin-bottom: 8px; color: #0f172a; }
+        .subtitle { color: #64748b; margin-bottom: 32px; font-size: 1rem; }
+        .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; margin-bottom: 24px; }
+        .card h2 { font-size: 1.15rem; color: #0f172a; margin-bottom: 16px; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
+        .metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+        .metric { background: #f1f5f9; border-radius: 8px; padding: 16px; text-align: center; }
+        .metric .value { font-size: 1.75rem; font-weight: 700; color: #0f172a; }
+        .metric .label { font-size: 0.85rem; color: #64748b; margin-top: 4px; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+        th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+        th { background: #f8fafc; font-weight: 600; color: #475569; }
+        .pass { color: #16a34a; font-weight: 600; }
+        .fail { color: #dc2626; font-weight: 600; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 6px; }
+        code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>Talk2Excel - Build Report</h1>
+    <p class="subtitle">Autonomous build completed on 2026-03-12</p>
+
+    <!-- Metrics -->
+    <div class="card">
+        <h2>Build Metrics</h2>
+        <div class="metric-grid">
+            <div class="metric">
+                <div class="value">~17 min</div>
+                <div class="label">Total Execution Time</div>
+            </div>
+            <div class="metric">
+                <div class="value">451</div>
+                <div class="label">Lines of Code Added</div>
+            </div>
+            <div class="metric">
+                <div class="value">2</div>
+                <div class="label">Files Created</div>
+            </div>
+            <div class="metric">
+                <div class="value">2</div>
+                <div class="label">Retry Iterations</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Summary of work -->
+    <div class="card">
+        <h2>Summary of Completed Work</h2>
+        <ul>
+            <li><strong>app.py</strong> (222 lines) - Full Streamlit application with:
+                <ul>
+                    <li>Two-area layout: left settings sidebar + main workspace</li>
+                    <li>OpenAI API key input with persistent local storage (~/.talk2excel/config.json)</li>
+                    <li>Model selector (default: GPT-5.4)</li>
+                    <li>Excel file upload with schema display using <code>df_schema.make_schema_from_df</code></li>
+                    <li>Chat interface for natural language queries</li>
+                    <li>LLM-generated Python code execution against pandas DataFrame</li>
+                    <li>Structured responses: text, tables, and matplotlib charts</li>
+                    <li>Raw LLM output toggle for AI transparency</li>
+                    <li>Clear conversation button</li>
+                </ul>
+            </li>
+            <li><strong>test_e2e.py</strong> (229 lines) - Playwright end-to-end test suite covering all 6 acceptance criteria using real LLM calls</li>
+            <li><strong>df_schema.py</strong> - Removed unused import (1 line changed)</li>
+            <li><strong>utils.py</strong> - Fixed all Ruff linting issues (style cleanup, no functional changes)</li>
+        </ul>
+    </div>
+
+    <!-- Tests & Checks -->
+    <div class="card">
+        <h2>Tests and Checks</h2>
+        <table>
+            <thead>
+                <tr><th>Test / Check</th><th>Description</th><th>Result</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>OpenAI API Connectivity</td>
+                    <td>Verified OPENAI_API_KEY env variable is set and accessible</td>
+                    <td class="pass">PASS</td>
+                </tr>
+                <tr>
+                    <td>Excel Upload &amp; Schema</td>
+                    <td>Upload sample_superstore.xls and verify schema columns display</td>
+                    <td class="pass">PASS</td>
+                </tr>
+                <tr>
+                    <td>Orders Count</td>
+                    <td>Query: "Show the number of all orders" &rarr; 10,194</td>
+                    <td class="pass">PASS</td>
+                </tr>
+                <tr>
+                    <td>Top Customers</td>
+                    <td>Query: "List the top 10 customers by total sales" &rarr; Sean Miller #1</td>
+                    <td class="pass">PASS</td>
+                </tr>
+                <tr>
+                    <td>West Region Profit</td>
+                    <td>Query: "Show total profit in the West region" &rarr; ~$110,799</td>
+                    <td class="pass">PASS</td>
+                </tr>
+                <tr>
+                    <td>Sales by Sub-Category</td>
+                    <td>Query: Technology sub-category sales as table + chart &rarr; Phones, Machines, etc.</td>
+                    <td class="pass">PASS</td>
+                </tr>
+                <tr>
+                    <td>Highest Profit Product</td>
+                    <td>Query: "Which product generated the highest total profit?" &rarr; Canon imageCLASS 2200</td>
+                    <td class="pass">PASS</td>
+                </tr>
+                <tr>
+                    <td>Ruff Linter</td>
+                    <td>Static code analysis on all Python files</td>
+                    <td class="pass">PASS</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Retries -->
+    <div class="card">
+        <h2>Retries / Failed Runs</h2>
+        <table>
+            <thead>
+                <tr><th>#</th><th>Issue</th><th>Resolution</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>LLM generated code with f-string syntax errors (unmatched brackets) causing exec() failures</td>
+                    <td>Updated prompt to instruct LLM to use str.format() instead of f-strings; eliminated curly brace conflicts</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>LLM counted unique Order IDs (5,111) instead of total rows (10,194) for "number of orders" query</td>
+                    <td>Added row count context and explicit instruction to the LLM prompt that each row represents one order record</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Assumptions -->
+    <div class="card">
+        <h2>Assumptions</h2>
+        <ul>
+            <li>The default model "GPT-5.4" is available via the OpenAI API at the time of use</li>
+            <li>The OPENAI_API_KEY environment variable is set for both the application and Playwright tests</li>
+            <li>"Number of all orders" refers to total row count (10,194) rather than unique Order IDs (5,111)</li>
+            <li>West region profit of ~$110,798.82 is acceptable as "110,799 (rounded)" per acceptance criteria</li>
+            <li>API key persistent storage uses a JSON file at ~/.talk2excel/config.json (no encryption, but file-system permissions apply)</li>
+            <li>LLM-generated code is executed via Python exec() in the Streamlit server process (acceptable for local-only use)</li>
+        </ul>
+    </div>
+
+    <!-- Known Issues -->
+    <div class="card">
+        <h2>Known Issues &amp; Limitations</h2>
+        <ul>
+            <li><strong>Security:</strong> LLM-generated code is executed via <code>exec()</code> without sandboxing. Acceptable for local use but not for multi-user deployment.</li>
+            <li><strong>Non-deterministic LLM responses:</strong> The LLM may occasionally generate syntactically invalid Python code. Error messages are displayed in the chat but no automatic retry is implemented.</li>
+            <li><strong>API key storage:</strong> The key is stored as plaintext JSON on disk. For production use, a system keyring integration would be recommended.</li>
+            <li><strong>Large files:</strong> Very large Excel files may cause slow processing or memory issues since the full DataFrame is held in memory.</li>
+            <li><strong>Chart rendering:</strong> Charts are rendered server-side as static PNG images via matplotlib. Interactive charts (e.g., Plotly) are not supported.</li>
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>

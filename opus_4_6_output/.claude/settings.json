@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip3 install:*)",
+      "Bash(python3 -c \"import app; print\\(''''Import OK''''\\)\")",
+      "Bash(python3 -m playwright install chromium)",
+      "Bash(python3 -c \"from playwright.sync_api import sync_playwright; print\\(''Playwright OK''\\)\")",
+      "Bash(python3 -m pytest test_e2e.py::TestExcelUploadAndSchema -v --tb=long)",
+      "Bash(python3 -c \":*)",
+      "Bash(python3 -m pytest test_e2e.py::TestExcelUploadAndSchema -v --tb=short)",
+      "Read(//tmp/**)",
+      "Read(//private/tmp/**)",
+      "Bash(lsof -ti:8501 -ti:8503)",
+      "Bash(xargs kill:*)",
+      "Bash(lsof -ti:8501)",
+      "Bash(python3 -m pytest test_e2e.py::TestOrdersCount -v --tb=short)",
+      "Bash(python3 -m pytest test_e2e.py -v --tb=short)",
+      "Bash(ruff check:*)"
+    ]
+  }
+}

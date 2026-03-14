@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Talk2Excel Build Report</title>
+  <style>
+    :root {
+      --ink: #102033;
+      --muted: #4b5b6b;
+      --line: #d7dee7;
+      --panel: rgba(255, 255, 255, 0.94);
+      --accent: #c2410c;
+      --accent-2: #1d4ed8;
+      --bg-1: #f6efe4;
+      --bg-2: #eef4ff;
+    }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(194, 65, 12, 0.08), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(29, 78, 216, 0.1), transparent 24%),
+        linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
+    }
+    main {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+    .hero, section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: 0 18px 48px rgba(16, 32, 51, 0.08);
+    }
+    .hero {
+      padding: 28px;
+      margin-bottom: 18px;
+    }
+    .eyebrow {
+      margin: 0 0 10px;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    h1, h2 {
+      margin: 0 0 10px;
+    }
+    h1 {
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.02;
+    }
+    h2 {
+      font-size: 22px;
+    }
+    p, li {
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    section {
+      padding: 22px 24px;
+      margin-bottom: 16px;
+    }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px 16px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(248,250,252,0.92));
+    }
+    .metric .label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .metric .value {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    th {
+      color: var(--ink);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    code {
+      font-family: Consolas, "SFMono-Regular", monospace;
+      font-size: 0.95em;
+      background: rgba(15, 23, 42, 0.05);
+      padding: 2px 6px;
+      border-radius: 6px;
+      color: var(--accent-2);
+    }
+    ul {
+      padding-left: 18px;
+      margin: 10px 0 0;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="hero">
+      <p class="eyebrow">Talk2Excel Delivery</p>
+      <h1>Autonomous build completed for the Streamlit Talk2Excel application.</h1>
+      <p>The app now supports local Excel ingestion, schema inspection with <code>df_schema.make_schema_from_df</code>, OpenAI-backed natural-language analysis through LLM-generated Python, raw-output transparency, secure key storage through the OS keyring, and Playwright end-to-end validation against the sample workbook.</p>
+      <div class="metrics">
+        <div class="metric">
+          <div class="label">Execution Window</div>
+          <div class="value">35m 57s</div>
+        </div>
+        <div class="metric">
+          <div class="label">LOC Added</div>
+          <div class="value">1,195</div>
+        </div>
+        <div class="metric">
+          <div class="label">LOC Removed</div>
+          <div class="value">24</div>
+        </div>
+        <div class="metric">
+          <div class="label">Failed Iterations</div>
+          <div class="value">8</div>
+        </div>
+      </div>
+      <p>Start: 2026-03-08 12:44:00 CDT<br>Completion: 2026-03-08 13:19:56 CDT</p>
+    </div>
+
+    <section>
+      <h2>Completed Work</h2>
+      <ul>
+        <li>Built a two-area Streamlit interface with a left settings sidebar and a main analysis workspace.</li>
+        <li>Added OpenAI API key handling, model selection with default <code>gpt-5.4</code>, a secure-storage toggle backed by <code>keyring</code>, raw LLM output visibility, and a conversation reset action.</li>
+        <li>Implemented Excel upload, dataset preview, schema text generation via <code>df_schema.make_schema_from_df</code>, and schema/status display for the uploaded workbook.</li>
+        <li>Implemented the Talk2Excel analysis loop using LLM-generated Python executed locally against pandas, with retry-on-failure behavior and rendering for text, tables, and matplotlib charts.</li>
+        <li>Added defensive validation around generated Python to block imports, file/network access, and obvious unsafe constructs.</li>
+        <li>Built Playwright end-to-end automation that uses the live OpenAI path and validates the sample workbook acceptance queries.</li>
+        <li>Cleaned the provided helper files enough for repository-wide <code>ruff check .</code> compliance.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Modified Files</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>File</th>
+            <th>Added</th>
+            <th>Removed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><code>app.py</code></td><td>441</td><td>0</td></tr>
+          <tr><td><code>pyproject.toml</code></td><td>6</td><td>0</td></tr>
+          <tr><td><code>talk2excel/__init__.py</code></td><td>21</td><td>0</td></tr>
+          <tr><td><code>talk2excel/analysis_engine.py</code></td><td>480</td><td>0</td></tr>
+          <tr><td><code>talk2excel/settings_store.py</code></td><td>62</td><td>0</td></tr>
+          <tr><td><code>tests/e2e/run_playwright.py</code></td><td>154</td><td>0</td></tr>
+          <tr><td><code>df_schema.py</code></td><td>3</td><td>2</td></tr>
+          <tr><td><code>utils.py</code></td><td>28</td><td>22</td></tr>
+        </tbody>
+      </table>
+      <p>LOC counts were computed against the original contents packaged in <code>baseline.zip</code>.</p>
+    </section>
+
+    <section>
+      <h2>Tests And Checks</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Command / Check</th>
+            <th>Result</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>OpenAI connectivity via <code>models.list()</code></td>
+            <td>Pass</td>
+            <td>Verified that <code>OPENAI_API_KEY</code> was present and that <code>gpt-5.4</code> was available.</td>
+          </tr>
+          <tr>
+            <td>Direct engine smoke test against <code>data/sample_superstore.xls</code></td>
+            <td>Pass</td>
+            <td>Validated the five acceptance queries through the live analysis engine before browser testing.</td>
+          </tr>
+          <tr>
+            <td><code>python tests/e2e/run_playwright.py</code></td>
+            <td>Pass</td>
+            <td>Verified schema display, row count, top customers, West profit, Technology sub-category table and chart, and highest-profit product.</td>
+          </tr>
+          <tr>
+            <td><code>ruff check .</code></td>
+            <td>Pass</td>
+            <td>Repository-wide static checks passed after helper-file cleanup.</td>
+          </tr>
+          <tr>
+            <td><code>python -m compileall app.py talk2excel tests/e2e/run_playwright.py utils.py df_schema.py</code></td>
+            <td>Pass</td>
+            <td>Confirmed Python syntax/import-time compilation for the delivered files.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Assumptions</h2>
+      <ul>
+        <li><code>OPENAI_API_KEY</code> is available in the local environment for autonomous build and automated UI execution.</li>
+        <li>The local machine has a functioning OS keyring, which the app uses for persistent secure storage of the API key.</li>
+        <li>The target workbook is a single-sheet Excel file compatible with <code>pandas.read_excel</code>.</li>
+        <li>Acceptance validation is intended to run each sample query in isolation; the Playwright harness opens a fresh browser session per query to keep the results stable.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Known Issues And Follow-Up</h2>
+      <ul>
+        <li>The generated-code safety gate is heuristic. It blocks imports, file I/O, network access, and obvious unsafe constructs, but it is not a fully sandboxed Python runtime.</li>
+        <li>LLM output is inherently probabilistic. The prompt and retry loop produced stable acceptance results here, but future model changes can still affect wording or formatting.</li>
+        <li>The current build focuses on single-workbook conversational analysis. Multi-sheet selection, result export, and downloadable chart artifacts would be sensible follow-up work.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
