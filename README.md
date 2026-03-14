@@ -105,3 +105,17 @@ Our evaluation criteria are purely objective.
 - ✅ Follow technical constraints  
 - ✅ Avoid shortcuts (like hardcoding answers)
 
+## Preventing "Cheating"
+
+One critical element in the spec is the **Technical Constraints / Implementation Guide**, which explicitly warns agents not to shortcut the system.
+
+For example:
+
+> **Important:**  
+> LLM must be used in end-to-end UI testing — do not bypass behavior with deterministic hard-coded logic.
+
+Without such instructions, agents sometimes try to **“game” the evaluation**.
+
+Yes - it turns out AI developers can be just as creative with requirements as human collegues… especially when trying to make the tests pass.
+
+
