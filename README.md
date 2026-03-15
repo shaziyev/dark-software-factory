@@ -173,6 +173,8 @@ The comparison focuses on:
 > **Claude Code 4.6 Opus — Efficient Minimalist**  
 > The laid-back senior engineer who finishes the task quickly and clearly has hobbies outside of programming.
 
+*Disclaimer: The above is a psychological metaphor, not a hiring strategy! Today’s agents lack the adaptability and judgment of humans - so the winning formula remains simple: human engineers with agents.*
+
 ## Takeaways
 
 Both agents successfully completed the test. Interestingly, it took **longer to write the specification than for the agents to produce the code**, which leads to a provocative conclusion: we may already be much closer to the Dark Software Factory than we think.
