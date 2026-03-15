@@ -52,7 +52,7 @@ Here is a screenshot of the application for illustration:
 
 ![App Screenshot](images/screenshot.png)
 
-## Inspiration
+## App Inspiration
 
 The idea for this app was inspired by Andrew Ng’s course: https://learn.deeplearning.ai/courses/agentic-ai/
 
