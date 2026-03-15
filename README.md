@@ -80,7 +80,7 @@ But for the sake of this experiment - and to keep the agents from fully taking o
 ## Build Instructions
 
 If you want to replicate the experiment, the input files are available in the [baseline](baseline) directory.  
-It contains the requirements as well as the code for a small prototype written in **Jupyter** (which is always a good choice for quick prototyping).
+It contains the requirements, a test dataset (XLS file) as well as the code for a small prototype written in **Jupyter** (which is always a good choice for quick prototyping).
 
 The prototype code is referenced in the specification under the Technical Constraints / Implementation Guidance section.
 
