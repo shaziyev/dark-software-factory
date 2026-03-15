@@ -101,7 +101,7 @@ Following Andrew Ng's advice:
 
 > **Eval is king.**
 
-Our evaluation criteria are purely objective.
+The evaluation criteria are purely objective.
 
 ### The build must:
 
