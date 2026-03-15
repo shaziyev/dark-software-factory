@@ -84,9 +84,13 @@ It contains the requirements as well as the code for a small prototype written i
 
 The prototype code is referenced in the specification under the Technical Constraints / Implementation Guidance section.
 
+Just open it in your favorite environment (Cursor or VS Code with Codex or Claude Code) and type something like:
+
+> Read requirements.md and follow its guidance to build the Talk2Excel application.
+
 ## The Key Mechanism — Build → Test → Fix Loop
 
-The system is designed for asynchronous autonomous execution.
+The spec is written for asynchronous autonomous execution.
 The agent runs the following loop:
 
 1. Build the application
