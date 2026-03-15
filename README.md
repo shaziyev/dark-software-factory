@@ -48,6 +48,8 @@ Python runs locally on the dataframe
 Results returned to user
 ```
 
+Here is a screenshot of the application for illustration:
+
 ![App Screenshot](images/screenshot.png)
 
 ## Inspiration
@@ -60,7 +62,8 @@ Highly recommended.
 
 ## The Spec-Driven Approach
 
-Instead of interactive coding via prompts, we provide coding agents with a complete specification:
+Instead of interactive coding via prompts, we provide coding agents with a [complete specification](baseline/requirements.md).
+
 The spec includes:
 - Product requirements
 - Technical constraints
