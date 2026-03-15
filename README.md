@@ -1,7 +1,7 @@
 # dark-software-factory
 Tests and benchmarks to address one simple question: Dark Software Factory - how far are we from it?
 
-Inspired by Dan Shapiro’s article [The Five Levels: From Spicy Autocomplete to the Software Factory](https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/), this project explores a simple but fascinating question:
+Inspired by Dan Shapiro’s article [The Five Levels: From Spicy Autocomplete to the Software Factory](https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/) (via the [@NateBJones podcast](https://www.youtube.com/@NateBJones)), this project explores a simple but fascinating question:
 
 > **How far are we from the Dark Software Factory — a black box that turns specs into production software?**
 
