@@ -12,13 +12,13 @@ Below is the conceptual ladder from AI-assisted coding to fully autonomous softw
 
 Quick summary:
 
-| Level                         | Description                                         | Human Role                          |
-| ----------------------------- | --------------------------------------------------- | ----------------------------------- |
-| **1 — Coding Intern**         | AI helps with small prompts and tasks               | Direct prompting                    |
-| **2 — Junior Developer**      | Pair programming with AI                            | Continuous interaction              |
-| **3 — Developer**             | AI writes code, humans review                       | Mostly synchronous supervision      |
-| **4 — Engineering Team**      | Spec-driven development with automated checks       | Humans define specs                 |
-| **5 — Dark Software Factory** | A black box that turns specifications into software | Humans define what, not how         |
+| Level                         | Description                                         | Human Role                                       |
+| ----------------------------- | --------------------------------------------------- | ------------------------------------------------ |
+| **1 — Coding Intern**         | AI helps with small prompts and tasks               | Direct prompting                                 |
+| **2 — Junior Developer**      | Pair programming with AI                            | Continuous interaction                           |
+| **3 — Developer**             | AI writes code, humans review                       | Mostly synchronous supervision                   |
+| **4 — Engineering Team**      | Spec-driven development with automated checks       | Humans define specs with implementation guidance |
+| **5 — Dark Software Factory** | A black box that turns specifications into software | Humans define what, not how                      |
 
 This project tests whether we can reliably operate somewhere between Level 4 and Level 5.
 
