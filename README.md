@@ -69,9 +69,9 @@ The spec includes:
 - Technical constraints / Implementation guidance
 - Acceptance criteria / Test cases
   
-Some people might argue that this is Level 4 Agentic Engineering, since the acceptance criteria effectively define the tests.
+Some people might argue that this is Level 4 Agentic Engineering, since the acceptance criteria effectively define the tests, plus implementation guidance.
 
-A true Level 5 Dark Software Factory would go one step further and generate the tests automatically from the PRD.
+A true Level 5 Dark Software Factory would go one step further and generate the tests automatically from the PRD (Product Requirements Document) and potentially, the technical specification as well.
 
 And honestly… I agree.
 
