@@ -67,7 +67,7 @@ Instead of interactive coding via prompts, we provide coding agents with a [comp
 The spec includes:
 - Product requirements
 - Technical constraints / Implementation guidance
-- Acceptance criteria (test cases)
+- Acceptance criteria / Test cases
   
 Some people might argue that this is Level 4 Agentic Engineering, since the acceptance criteria effectively define the tests.
 
