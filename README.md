@@ -183,7 +183,7 @@ Of course, real-world projects with large codebases and complex dependencies are
 
 However, the capability frontier is moving quickly. The effective intelligence of LLM systems appears to be **roughly doubling every ~7 months** (see [METR Time Horizons](https://metr.org/time-horizons/)).
 
-In this small experiment, the agents autonomously implemented a **complete feature from specification to tested code**, without human supervision - a task that would typically require days of focused engineering effort.
+In this small experiment, the agents autonomously implemented a **complete application from specification to tested code**, without human supervision - a task that would typically require days of focused engineering effort.
 
 ## 🧠 The New Bottleneck: Human Thinking
 
