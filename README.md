@@ -181,7 +181,7 @@ Both agents successfully completed the test. Interestingly, it took **longer to 
 
 Of course, real-world projects with large codebases and complex dependencies are significantly harder to delegate to agents without close supervision.
 
-However, the capability frontier is moving quickly. The effective intelligence of LLM systems appears to be **roughly doubling every ~7 months** (see [METR Time Horizons](https://metr.org/time-horizons/)).
+However, the capability frontier is moving quickly. The effective intelligence of LLM systems appears to be **roughly doubling every 6-7 months** (no kidding about the 6–7 numbers :), see [METR Time Horizons](https://metr.org/time-horizons/)).
 
 In this small experiment, the agents autonomously implemented a **complete application from specification to tested code**, without human supervision - a task that would typically require days of focused engineering effort.
 
